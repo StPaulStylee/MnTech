@@ -39,11 +39,11 @@
                   of the geographical shape of minnesota, painted vibrant green, the the text MN Tech
                   coop inside of it" title="The MN Tech Logo" />
       </div>
-      <nav>
-        <a href="/home" ng-controller="HomeController as home" ng-click="home.setActive('home')"><span class="nav-link">Home</span></a
-        ><a href="/about" ng-controller="AboutController as about" ng-click="about.setActive('about')"><span class="nav-link">About</span></a
-        ><a href="/services" ng-controller="ServicesController as services" ng-click="services.setActive('services')"><span class="nav-link">Services</span></a
-        ><a href="/join" ng-controller="JoinController as join" ng-click="join.setActive('join')"><span class="nav-link">Join</span></a>
+      <nav ng-controller="BaseController as base">
+        <a ng-class="{home: base.isActive.home}" href="/home" ng-click="base.setActive('home')"><span class="nav-link">Home</span></a
+        ><a ng-class="{about: base.isActive.about}" href="/about" ng-click="base.setActive('about')"><span class="nav-link">About</span></a
+        ><a ng-class="{services: base.isActive.services}" href="/services" ng-click="base.setActive('services')"><span class="nav-link">Services</span></a
+        ><a ng-class="{join: base.isActive.join}" href="/join" ng-click="base.setActive('join')"><span class="nav-link">Join</span></a>
         <!-- <a href="/blog"><span class="nav-link">Blog</span></a> -->
       </nav>
     </header>

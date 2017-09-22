@@ -6,10 +6,6 @@ function JoinController(EmailService, StyleService) {
 
   var ctrl = this;
 
-  ctrl.setActive = function(route) {
-    StyleService.setActive(route)
- }
-
   ctrl.sendFormData = function(data) {
     data.subject = "Membership Request"
     console.log(ServicesController.name);

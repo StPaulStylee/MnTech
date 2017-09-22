@@ -5,10 +5,10 @@ function ServicesController(EmailService, StyleService) {
   console.log('ServicesController Loaded');
 
   const ctrl = this;
-
-  ctrl.setActive = function(route) {
-    StyleService.setActive(route)
- }
+ // 
+ //  ctrl.setActive = function(route) {
+ //    StyleService.setActive(route)
+ // }
 
   ctrl.sendFormData = function(data) {
     data.subject = "Requesting A Quote"

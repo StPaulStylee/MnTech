@@ -8,35 +8,42 @@ function StyleService() {
   service.isActive = {}
 
   service.setInitial = function(route) {
-    switch (route) {
-      case 'home': service.isActive.home = true;
-        break;
-      case 'join': service.isActive.join = true;
-        break;
-      default: service.isActive.home = true;
+    // switch (route) {
+    //   case 'home': service.isActive.home = true;
+    //     break;
+    //   case 'join': service.isActive.join = true;
+    //     break;
+    //   default: service.isActive.home = true;
+    service.setActive(route);
     }
-    console.log(service.isActive);
-  }
+
 
   service.setActive = function(route) {
-    service.isActive = {};
     switch (route) {
       case 'home': service.isActive.home = true;
+                   service.isActive.about = false;
+                   service.isActive.services = false;
+                   service.isActive.join = false;
         break;
-      case 'about': service.isActive.about = true;
+      case 'about': service.isActive.home = false;
+                   service.isActive.about = true;
+                   service.isActive.services = false;
+                   service.isActive.join = false;
         break;
-      case 'services': service.isActive.services = true;
+      case 'services': service.isActive.home = false;
+                   service.isActive.about = false;
+                   service.isActive.services = true;
+                   service.isActive.join = false;
         break;
-      case 'join': service.isActive.join = true;
+      case 'join': service.isActive.home = false;
+                   service.isActive.about = false;
+                   service.isActive.services = false;
+                   service.isActive.join = true;
         break;
       default: service.isActive.home = true;
     }
     console.log(service.isActive);
+    return service.isActive;
   }
-
-  // service.setActive(boolean) {
-  //
-  // }
-// .global-navbar nav a
 
 }// End of Service
