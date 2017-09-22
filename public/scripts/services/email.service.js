@@ -1,5 +1,5 @@
 angular.module('mnTechSite')
-       .service('emailServ', EmailService);
+       .service('EmailService', EmailService);
 
 function EmailService($http) {
 

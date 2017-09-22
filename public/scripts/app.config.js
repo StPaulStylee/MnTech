@@ -2,13 +2,13 @@ angular.module('mnTechSite')
        .config(function($routeProvider, $locationProvider) {
          $routeProvider.when('/landing', {
            templateUrl: 'views/landing.html',
-           controller: 'LandingController as Landing'
+           controller: 'LandingController as landing'
          }).when('/home', {
            templateUrl: 'views/home.html',
-           controller: 'BaseController as base'
+           controller: 'HomeController as home'
          }).when('/about', {
            templateUrl: 'views/about.html',
-           controller: 'BaseController as base'
+           controller: 'AboutController as about'
          }).when('/services', {
            templateUrl: 'views/services.html',
            controller: 'ServicesController as services'

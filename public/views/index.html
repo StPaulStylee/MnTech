@@ -21,6 +21,13 @@
     <script src="/scripts/controllers/services.controller.js"></script>
     <script src="/scripts/controllers/join.controller.js"></script>
     <script src="/scripts/controllers/blog.controller.js"></script>
+    <script src="/scripts/controllers/home.controller.js"></script>
+    <script src="/scripts/controllers/about.controller.js"></script>
+
+
+    <!-- Services -->
+    <script src="/scripts/services/email.service.js"></script>
+    <script src="/scripts/services/style.service.js"></script>
 
 
     <base href="/" />
@@ -33,10 +40,10 @@
                   coop inside of it" title="The MN Tech Logo" />
       </div>
       <nav>
-        <a href="/home"><span class="nav-link">Home</span></a
-        ><a href="/about"><span class="nav-link">About</span></a
-        ><a href="/services"><span class="nav-link">Services</span></a
-        ><a href="/join"><span class="nav-link">Join</span></a>
+        <a href="/home" ng-controller="HomeController as home" ng-click="home.setActive('home')"><span class="nav-link">Home</span></a
+        ><a href="/about" ng-controller="AboutController as about" ng-click="about.setActive('about')"><span class="nav-link">About</span></a
+        ><a href="/services" ng-controller="ServicesController as services" ng-click="services.setActive('services')"><span class="nav-link">Services</span></a
+        ><a href="/join" ng-controller="JoinController as join" ng-click="join.setActive('join')"><span class="nav-link">Join</span></a>
         <!-- <a href="/blog"><span class="nav-link">Blog</span></a> -->
       </nav>
     </header>

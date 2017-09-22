@@ -5,4 +5,5 @@ function BaseController() {
   console.log('BaseController Loaded');
 
   var ctrl = this;
+
 }
