@@ -29,6 +29,7 @@
     <script src="/scripts/services/email.service.js"></script>
     <script src="/scripts/services/style.service.js"></script>
 
+    <!-- <meta name='viewport' content='width=device-width, initial-scale=1' /> -->
 
     <base href="/" />
   </head>
@@ -40,10 +41,10 @@
                   coop inside of it" title="The MN Tech Logo" />
       </div>
       <nav ng-controller="BaseController as base">
-        <a ng-class="{home: base.isActive.home}" href="/home" ng-click="base.setActive('home')"><span class="nav-link">Home</span></a
-        ><a ng-class="{about: base.isActive.about}" href="/about" ng-click="base.setActive('about')"><span class="nav-link">About</span></a
-        ><a ng-class="{services: base.isActive.services}" href="/services" ng-click="base.setActive('services')"><span class="nav-link">Services</span></a
-        ><a ng-class="{join: base.isActive.join}" href="/join" ng-click="base.setActive('join')"><span class="nav-link">Join</span></a>
+        <a ng-class="{home: base.isActive.home}" class href="/home" ng-click="base.setActive('home')"><span class="nav-link">Home</span></a
+        ><a ng-class="{about: base.isActive.about}" class href="/about" ng-click="base.setActive('about')"><span class="nav-link">About</span></a
+        ><a ng-class="{services: base.isActive.services}" class href="/services" ng-click="base.setActive('services')"><span class="nav-link">Services</span></a
+        ><a ng-class="{join: base.isActive.join}" href="/join" class ng-click="base.setActive('join')"><span class="nav-link">Join</span></a>
         <!-- <a href="/blog"><span class="nav-link">Blog</span></a> -->
       </nav>
     </header>

@@ -11,4 +11,6 @@ function BaseController(StyleService) {
   ctrl.setActive = function(route) {
     ctrl.isActive = StyleService.setActive(route);
  }
+
+
 }

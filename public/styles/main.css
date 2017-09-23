@@ -93,7 +93,6 @@ label {
 
 .global-navbar {
 	background-color: var(--white);
-	box-sizing: padding-box;
 	height: 16vh;
 	position: relative;
 	width: 100vw;
@@ -148,12 +147,6 @@ label {
 	width: 13em;
 }
 
-/*
-.general-navbar .logo-container-global {
-	height: 100%;
-	width: 15em;
-}*/
-
 .logo-container-global img {
 	height: 100%;
 	width: 100%;
@@ -198,7 +191,7 @@ Landing Page
 
 }
 
-#general-page {
+div#general-page {
 	position: fixed;
 	min-height: 100vh;
 	min-width: 100vw;
@@ -279,6 +272,7 @@ li.service {
 
 ul.services-section-list {
 	position: relative;
+	width: 100vw;
 }
 
 li.service.web-design, li.service.apps {
@@ -412,7 +406,8 @@ About Page
 	float: right;
 	height: 54vh;
 	padding: 1.5em 3em;
-	position: relative;
+	position: absolute;
+	right: 0;
 	width: 60vw;
 }
 
@@ -555,4 +550,15 @@ Join Us Page
 
 .request-form div:first-child {
 	margin-top: 0;
+}
+
+
+/*--------------------------------------------------------------------------------------------
+Media Queries
+---------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1366px) {
+	.navigate-container-left, .navigate-container-right {
+		padding-top: 7em;
+	}
 }
