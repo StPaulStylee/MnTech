@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	overflow: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -558,7 +559,27 @@ Media Queries
 ---------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 1366px) {
+	/*------------- Nav Bar --------------------*/
 	.navigate-container-left, .navigate-container-right {
 		padding-top: 7em;
 	}
+	.global-navbar nav {
+		right:5em;
+	}
+
+	/*------------- Home Page --------------------*/
+	.page-header.home-header {
+		height: 45vh;
+	}
+	li.service {
+		height: 39vh;
+	}
+	/*------------- About Page --------------------*/
+.content-container {
+	padding-top: 3em;
+}
+.page-header .header-content {
+	font-size: 2.25em;
+	max-width: 65vw;
+}
 }
