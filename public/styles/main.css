@@ -557,7 +557,7 @@ Join Us Page
 /*--------------------------------------------------------------------------------------------
 Media Queries
 ---------------------------------------------------------------------------------------------*/
-
+/* iPad Pro Landscape */
 @media screen and (max-width: 1366px) {
 	/*------------- Nav Bar --------------------*/
 	.navigate-container-left, .navigate-container-right {
@@ -571,15 +571,76 @@ Media Queries
 	.page-header.home-header {
 		height: 45vh;
 	}
+
+	.page-header.home-header .header-title {
+		padding: 0.33em;
+	}
+
 	li.service {
 		height: 39vh;
 	}
 	/*------------- About Page --------------------*/
-.content-container {
-	padding-top: 3em;
+	.content-container {
+		padding-top: 3em;
+	}
+	.page-header .header-content {
+		font-size: 2.25em;
+		max-width: 65vw;
+	}
+	.list-header, .list-content {
+		font-size: 1.625em;
+	}
+	.services-list {
+		margin-top: 2em;
+	}
+	.values-header.header {
+		padding-bottom: 10px;
+	}
+	.legal-stuff.values-legal {
+		height: 11vh;
+	}
+	.members-section .right-side {
+		padding: 1.5em 0 0 0;
+	}
+	.members-list {
+		margin-top: 4.25em;
+	}
+	.member .image-container {
+		margin-left: 0;
+	}
+	.member {
+		width: 90%;
+	}
+	.hannah {
+		margin: 3.5em auto;
+	}
+	.request-form .input-container input {
+		margin-top: 5px;
+	}
+	.input-container {
+		margin: 1.5em 0;
+	}
+/*------------- Join Page --------------------*/
+	.join-section-header {
+		margin-bottom: 10px;
+	}
+	.join-section .list-content {
+		font-size: 1.55em;
+	}
 }
+
+/* iPad Pro Portrait */
+@media screen and (max-width: 1024px) {
+/*-------------  Nav --------------------*/
+	.global-navbar nav {
+		width: auto;
+	}
+.logo-container-global {
+	width: 16.75em;
+}
+/*------------- About Page --------------------*/
 .page-header .header-content {
-	font-size: 2.25em;
-	max-width: 65vw;
+	max-width: 80vw;
 }
+
 }
