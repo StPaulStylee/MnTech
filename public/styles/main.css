@@ -553,7 +553,6 @@ Join Us Page
 	margin-top: 0;
 }
 
-
 /*--------------------------------------------------------------------------------------------
 Media Queries
 ---------------------------------------------------------------------------------------------*/
@@ -630,17 +629,103 @@ Media Queries
 }
 
 /* iPad Pro Portrait */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (max-height: 1366px) {
 /*-------------  Nav --------------------*/
 	.global-navbar nav {
 		width: auto;
 	}
-.logo-container-global {
-	width: 16.75em;
-}
+	.logo-container-global {
+		width: 16.75em;
+	}
 /*------------- About Page --------------------*/
-.page-header .header-content {
-	max-width: 80vw;
+	.page-header .header-content {
+		max-width: 80vw;
+	}
+	.member {
+		margin: 8em auto;
+		width: auto;
+	}
+	.member-bio {
+		width: 75%;
+	}
+/*------------- Services Page --------------------*/
+	.input-container.description-container {
+		margin-bottom: 0;
+	}
+	.description-input {
+		height: 21.5vh;
+	}
+/*------------- Join Page --------------------*/
+	.info-input {
+		height: 11em;
+	}
 }
+
+/* iPad landscape */
+@media screen and (max-width: 1024px) and (max-height: 768px){
+	/*------------- Nav Bar --------------------*/
+	.logo-container-global {
+		width: 8.5em;
+	}
+	.nav-link {
+		font-size: 1.75em;
+	}
+	/*------------- Home Page --------------------*/
+	.page-header.home-header .header-title {
+		font-size: 8em;
+	}
+	.page-header.home-header .header-content {
+		font-size: 2.75em;
+	}
+	.service-header {
+		top: 20%;
+	}
+	/*------------- About Page --------------------*/
+	.content-container {
+		padding: 0;
+	}
+	.page-header .header-title {
+		font-size: 7.5em;
+	}
+	.header {
+		font-size: 2.2em;
+	}
+	.page-header .header-content {
+		font-size: 2em;
+	}
+	.list-header, .list-content {
+		font-size: 1.2em;
+	}
+	.left-side .list-item {
+		padding: 1em 0 0 0;
+	}
+	.members-list {
+		margin: 0;
+	}
+	.members-header.header {
+		font-size: 3.5em;
+	}
+	.member .image-container {
+		height: 10em;
+		margin-top: 1em;
+		width: 10em;
+	}
+	.member {
+		margin: 0 auto;
+	}
+	.member-bio {
+		font-size: 1.25em;
+	}
+	/*------------- Services Page --------------------*/
+	.services-content .page-header .header-title {
+		font-size: 6.6em;
+		padding: 0.33em 1em;
+	}
+	.services-list {
+		margin-top: 1em;
+	}
+	.services-list .list-header .list-content {
+		font-size: 1.25em;
+	}
 
 }
