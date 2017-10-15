@@ -18,6 +18,9 @@ angular.module('mnTechSite')
          }).when('/blog', {
            templateUrl: 'views/blog.html',
            controller: 'BlogController as blog'
+         }).when('/bylaws', {
+           templateUrl: 'views/bylaws.html',
+           controller: 'BylawsController as laws'
          }).otherwise({
            redirectTo: '/landing'
          });

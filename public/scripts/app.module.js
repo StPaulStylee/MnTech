@@ -1,1 +1,1 @@
-angular.module('mnTechSite', ['ngRoute']);
+angular.module('mnTechSite', ['ngRoute', 'ngAnimate']);

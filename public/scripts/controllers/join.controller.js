@@ -6,12 +6,18 @@ function JoinController(EmailService, StyleService) {
 
   var ctrl = this;
 
+  ctrl.isFocused;
+
   ctrl.sendFormData = function(data) {
     data.subject = "Membership Request"
     console.log(ServicesController.name);
     EmailService.sendFormData(data).then(function(response){
       console.log("Response from submit: ", repsonse);
     });
+  }
+
+  ctrl.setFocus = function(bool) {
+    ctrl.isFocused = bool;
   }
 
   // ctrl.isActive();

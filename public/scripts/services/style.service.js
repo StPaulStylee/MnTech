@@ -5,7 +5,7 @@ function StyleService() {
 
   const service = this;
 
-  service.isActive = {}
+  service.isActive = {};
 
   service.setInitial = function(route) {
     // switch (route) {
@@ -15,8 +15,7 @@ function StyleService() {
     //     break;
     //   default: service.isActive.home = true;
     service.setActive(route);
-    }
-
+  }
 
   service.setActive = function(route) {
     switch (route) {

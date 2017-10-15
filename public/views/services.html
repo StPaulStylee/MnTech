@@ -1,19 +1,18 @@
-<div id="general-page services-page">
+<div id="general-page">
 
 
 <main class="services-content">
-  <section class="page-header services-header">
+  <section class="page-header services-header" ng-class="{focused: services.isFocused}" ng-click="services.setFocus(false)">
     <div class="content-container">
       <h1 class="header-title">Services with principle</h1>
-      <p class="header-content">Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Aenean eu justo a nisi consectetur dignissim.
-                    Morbi sit amet nulla elit. Nullam quis consectetur nunc.
-                    Curabitur lobortis laoreet lacus nec sagittis.
+      <p class="header-content">At the MN Tech Coop we pride ourselves in our core values. Every
+        freelancer at the Coop connects small businesses and nonprofits with technology that maximizes impact by exceeding
+        goals and lowering administrative burdens.
       </p>
     </div>
   </section>
 
-  <section class="services-section left-side">
+  <section class="services-section left-side" ng-click="services.setFocus(false)">
     <h2 class="services-section-header header">Services</h2>
     <ul class="services-list">
       <li class="service-item list-item">
@@ -41,33 +40,33 @@
     </ul>
   </section>
 
-  <section class="quote-section right-side">
+  <section class="quote-section right-side" ng-class="{focused: services.isFocused}">
     <div class="section-header">
       <h2 class="quote-header header">Request A Quote</h2>
     </div>
-    <form class="request-form" ng-model="services">
+    <form class="request-form" ng-submit="services.sendFormData(services)" ng-model="services">
       <div class="input-container">
         <label class="name-label" for="name">Name</label>
-        <input class="name-input" type="text" name="name" ng-model="services.name" />
+        <input class="name-input" type="text" name="name" ng-model="services.name" ng-focus="services.setFocus(true)" required />
       </div>
       <div class="input-container">
         <label class="organization-label" for="organization">Company/Organization</label>
-        <input class="organization-input" type="text" name="organization" ng-model="services.organization" />
+        <input class="organization-input" type="text" name="organization" ng-model="services.organization" ng-focus="services.setFocus(true)" />
       </div>
       <div class="input-container email-container">
         <label class="email-label" for="email">Email</label>
-        <input class="email-input" type="email" name="email" ng-model="services.email" />
+        <input class="email-input" type="email" name="email" ng-model="services.email" ng-focus="services.setFocus(true)"required/>
       </div>
       <div class="input-container phone-container">
         <label class="phone-label" for="phone">Phone</label>
-        <input class="phone-input" type="tel" name="phone" ng-model="services.phone" />
+        <input class="phone-input" type="tel" name="phone" ng-model="services.phone" ng-focus="services.setFocus(true)" />
       </div>
       <div class="input-container description-container">
         <label class="description-label" for="description">Describe your project</label>
-        <textarea class="description-input" name="description" ng-model="services.description" ></textarea>
+        <textarea class="description-input" name="description" ng-model="services.description" ng-focus="services.setFocus(true)" required ></textarea>
       </div>
       <div class="input-container submit-button">
-        <input type="submit" ng-click="services.sendFormData(services)"/>
+        <input type="submit" ng-show="services.isFocused" value="Submit"  />
       </div>
     </form>
   </section>

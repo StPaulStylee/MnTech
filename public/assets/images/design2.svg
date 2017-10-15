@@ -1,0 +1,14 @@
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="design">
+ <g>
+  <g id="svg_2">
+   <path fill="black" d="m2,0c-1.104,0 -2,0.896 -2,2l0,15c0,1.104 0.896,2 2,2l20,0c1.104,0 2,-0.896 2,-2l0,-15c0,-1.104 -0.896,-2 -2,-2l-20,0zm20,14l-20,0l0,-12l20,0l0,12zm-6.599,7c0,1.6 1.744,2.625 2.599,3l-12,0c0.938,-0.333 2.599,-1.317 2.599,-3l6.802,0z" id="svg_1"/>
+   <path fill="none" stroke="#000000" d="m2.88973,3.69063c0,0 14.81671,0.10011 14.81671,0.20023c0,0.10011 -14.81671,-0.20023 -14.81671,-0.20023z" id="svg_5" stroke-width="0" opacity="0.75"/>
+   <line fill="none" x1="18.60746" y1="3.89085" x2="3.29019" y2="3.89085" id="svg_7" stroke="#000000"/>
+   <rect fill="none" stroke="#000000" stroke-width="null" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="15.00339" y="7.69514" width="2.60294" height="4.60519" id="svg_8"/>
+   <line fill="none" x1="18.69816" y1="5.83365" x2="3.38088" y2="5.83365" stroke="#000000" id="svg_12"/>
+   <line fill="none" stroke="#000000" stroke-width="null" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="3.39029" y1="7.89537" x2="13.20136" y2="7.99548" id="svg_13"/>
+   <line fill="none" stroke="#000000" stroke-width="null" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="3.43094" y1="9.98833" x2="13.242" y2="10.08845" id="svg_14"/>
+   <line fill="none" stroke="#000000" stroke-width="null" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="3.43094" y1="11.99059" x2="13.242" y2="12.09071" id="svg_16"/>
+  </g>
+ </g>
+</svg>

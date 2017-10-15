@@ -5,10 +5,11 @@ function ServicesController(EmailService, StyleService) {
   console.log('ServicesController Loaded');
 
   const ctrl = this;
- // 
+ //
  //  ctrl.setActive = function(route) {
  //    StyleService.setActive(route)
  // }
+ ctrl.isFocused;
 
   ctrl.sendFormData = function(data) {
     data.subject = "Requesting A Quote"
@@ -16,5 +17,9 @@ function ServicesController(EmailService, StyleService) {
     EmailService.sendFormData(data).then(function(response){
       console.log("Response from submit: ", repsonse);
     });
+  }
+
+  ctrl.setFocus = function(bool) {
+    ctrl.isFocused = bool;
   }
 }

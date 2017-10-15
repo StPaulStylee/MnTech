@@ -64,7 +64,7 @@ Colors
 --slate-grey: #333D46;
 --vibrant-green: #B1DD01;
 --navy: #123855;
---storm-grey: #638290;
+--storm-grey: #515961;
 --cloud-grey: #C0C5CE;
 --white: #f5f5f5;
 --dark-grey: #2a2d2a;
@@ -90,6 +90,12 @@ button:focus {
 
 label {
 	display: inline-block;
+}
+
+#general-page {
+	position: fixed;
+	min-height: 100vh;
+	min-width: 100vw;
 }
 
 .global-navbar {
@@ -156,8 +162,9 @@ label {
 
 .page-header {
 	background-color: var(--slate-grey);
-	min-width: 100vw;
+	width: 100vw;
 	text-align: center;
+	transition: 0.25s linear all;
 }
 
 h1.header-title {
@@ -174,10 +181,33 @@ p.header-content {
 Fonts
 ---------------------------------------------------------------------------------------------*/
 
-h1, h2, h3, h4, h5, h6, span, p {
+h1, h2, h3, h4, h5, h6, span, p, input[type="submit"] {
   font-family: 'Montserrat', sans-serif;
 
 }
+
+/*--------------------------------------------------------------------------------------------
+Buttons
+---------------------------------------------------------------------------------------------*/
+.request-form input[type="submit"] {
+	border: none;
+	height: 3.5em;
+	text-transform: uppercase;
+	transition: 0.25s ease-in all;
+}
+
+.request-form.ng-invalid-required input[type="submit"] {
+	background-color: rgba(192, 197, 206, 0.25);
+	color: #a0a8b6;
+}
+
+.request-form.ng-valid-required input[type="submit"] {
+	background: var(--slate-grey);
+	color: var(--vibrant-green);
+	cursor: pointer;
+}
+
+
 
 /*--------------------------------------------------------------------------------------------
 Landing Page
@@ -190,12 +220,6 @@ Landing Page
 	position: absolute;
 	top: 0;
 
-}
-
-div#general-page {
-	position: fixed;
-	min-height: 100vh;
-	min-width: 100vw;
 }
 
 .logo-container-landing {
@@ -318,6 +342,15 @@ li.service.web-design, li.service.apps, li.service.branding {
 	width: 100%;
 }
 
+/* SVGs*/
+.svg-container {
+	position: relative;
+}
+
+svg {
+	position: absolute;
+}
+
 
 /*--------------------------------------------------------------------------------------------
 About Page
@@ -399,6 +432,14 @@ About Page
 	text-align: left;
 }
 
+a.bylaws {
+	color: var(--white);
+}
+
+a.bylaws:hover {
+	text-decoration: underline;
+}
+
 /*Right Side*/
 
 .right-side {
@@ -410,6 +451,7 @@ About Page
 	position: absolute;
 	right: 0;
 	width: 60vw;
+	transition: 0.25s linear all;
 }
 
 .members-header.header {
@@ -477,6 +519,24 @@ Services Page
 	height: 54vh;
 }
 
+.page-header.services-header.focused, .page-header.join-header.focused {
+	transition: 0.25s linear all;
+	width: 40vw;
+}
+
+.services-header.focused .header-title, .join-header.focused .header-title {
+	font-size: 6em;
+}
+
+.services-header.focused .header-content, .join-header.focused .header-content {
+	font-size: 2em;
+	padding: 0 2em;
+}
+
+.quote-section.focused textarea {
+	height: 38vh;
+}
+
 .services-section-header, .quote-header {
 	font-size: 4em;
 }
@@ -498,6 +558,12 @@ Services Page
 }
 
 /*Right Side - Form*/
+
+.quote-section.focused, .join-us-section.focused {
+	height: 84vh;
+	transform: translateY(-30vh);
+	transition: 0.25s linear all;
+}
 
 .request-form, textarea {
 	color: var(--navy);
@@ -521,6 +587,10 @@ Services Page
 	width: 100%;
 }
 
+.request-form textarea {
+	height: 18vh;
+}
+
 .request-form .email-container, .request-form .phone-container {
 	width: 48%;
 }
@@ -535,7 +605,7 @@ Services Page
 
 .input-container.description-container {
 	clear: both;
-	margin-bottom: 4em;
+	margin-bottom: 2em;
 }
 
 
@@ -543,7 +613,10 @@ Services Page
 /*--------------------------------------------------------------------------------------------
 Join Us Page
 ---------------------------------------------------------------------------------------------*/
-
+/*left-side*/
+.join-header.focused .content-container {
+	padding-top: 3em;
+}
 /*Right Side*/
 .join-us-section form.request-form .info-container {
 	margin-bottom: 2em;
@@ -553,6 +626,24 @@ Join Us Page
 	margin-top: 0;
 }
 
+.join-us-section textarea {
+	height: 11vh;
+}
+
+.join-us-section.focused textarea {
+	height: 31.5vh;
+}
+
+.quote-section.focused textarea {
+	height: 38vh;
+}
+
+/*--------------------------------------------------------------------------------------------
+Bylaws Page
+---------------------------------------------------------------------------------------------*/
+.bylaws-content {
+	font-size: 1.8em;
+}
 /*--------------------------------------------------------------------------------------------
 Media Queries
 ---------------------------------------------------------------------------------------------*/
@@ -724,8 +815,12 @@ Media Queries
 	.services-list {
 		margin-top: 1em;
 	}
-	.services-list .list-header .list-content {
+	.services-list .list-headern .list-content {
 		font-size: 1.25em;
+	}
+
+	.request-form label {
+		font-size: 1.66em;
 	}
 
 }

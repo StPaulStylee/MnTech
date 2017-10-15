@@ -24,7 +24,7 @@ let transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
       user: 'mntechcoop@gmail.com',
-      pass: 'Mn*Tech*2017!'
+      pass: 'MinnesotaTech*2017!'
   },
 });
 
