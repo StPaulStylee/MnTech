@@ -344,11 +344,24 @@ li.service.web-design, li.service.apps, li.service.branding {
 
 /* SVGs*/
 .svg-container {
+	height: 43vh;
 	position: relative;
 }
 
 svg {
+	height: 15em;
 	position: absolute;
+	top: 37%;
+}
+
+.design .pointer {
+	display: none;
+	transform: scale(0.125) translate(3em, 3em);
+
+}
+
+.design:hover .pointer {
+	display: block;
 }
 
 
