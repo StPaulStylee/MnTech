@@ -191,7 +191,7 @@ Buttons
 ---------------------------------------------------------------------------------------------*/
 .request-form input[type="submit"] {
 	border: none;
-	height: 3.5em;
+	height: 3.35em;
 	text-transform: uppercase;
 	transition: 0.25s ease-in all;
 }
@@ -219,7 +219,7 @@ Landing Page
 	min-width: 100vw;
 	position: absolute;
 	top: 0;
-
+	z-index: 1;
 }
 
 .logo-container-landing {
@@ -345,7 +345,9 @@ li.service.web-design, li.service.apps, li.service.branding {
 /* SVGs*/
 .svg-container {
 	height: 43vh;
+	margin: 0 auto;
 	position: relative;
+	width: 12em;
 }
 
 svg {
@@ -353,6 +355,10 @@ svg {
 	position: absolute;
 	top: 37%;
 }
+
+/*.design *, .apps * {
+	fill: var(--slate-grey);
+}*/
 
 .design .pointer {
 	display: none;
@@ -364,6 +370,9 @@ svg {
 	display: block;
 }
 
+/*.branding {
+	fill: var(--navy);
+}*/
 
 /*--------------------------------------------------------------------------------------------
 About Page
@@ -601,7 +610,7 @@ Services Page
 }
 
 .request-form textarea {
-	height: 18vh;
+	height: 16vh;
 }
 
 .request-form .email-container, .request-form .phone-container {
@@ -618,7 +627,6 @@ Services Page
 
 .input-container.description-container {
 	clear: both;
-	margin-bottom: 2em;
 }
 
 
@@ -631,16 +639,13 @@ Join Us Page
 	padding-top: 3em;
 }
 /*Right Side*/
-.join-us-section form.request-form .info-container {
-	margin-bottom: 2em;
-}
 
 .request-form div:first-child {
 	margin-top: 0;
 }
 
 .join-us-section textarea {
-	height: 11vh;
+	height: 10vh;
 }
 
 .join-us-section.focused textarea {
@@ -657,6 +662,33 @@ Bylaws Page
 .bylaws-content {
 	font-size: 1.8em;
 }
+
+/*--------------------------------------------------------------------------------------------
+Footer
+---------------------------------------------------------------------------------------------*/
+.global-footer {
+	bottom: 0;
+	background-color: rgba(5, 5, 5, 0.9);
+	color: var(--white);
+	font-size: 1.3em;
+	height: 3.5vh;
+	position: absolute;
+	width: 100vw;
+}
+
+.footer-content-container {
+	margin: 1.25vh auto 0;
+	width: fit-content;
+}
+
+.contact-us {
+	text-transform: uppercase;
+}
+
+.footer-content-container a {
+	color: var(--white);
+}
+
 /*--------------------------------------------------------------------------------------------
 Media Queries
 ---------------------------------------------------------------------------------------------*/
