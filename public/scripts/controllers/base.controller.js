@@ -8,9 +8,9 @@ function BaseController(StyleService) {
 
   ctrl.isActive = {};
 
+
   ctrl.setActive = function(route) {
     ctrl.isActive = StyleService.setActive(route);
- }
-
+  }
 
 }

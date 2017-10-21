@@ -492,7 +492,6 @@ a.bylaws:hover {
 	border: 1px solid var(--cloud-grey);
 	border-radius: 50%;
 	height: 12em;
-	margin-left: 5%;
 	width: 12em;
 }
 
@@ -518,10 +517,9 @@ a.bylaws:hover {
 
 .member-bio {
 	font-size: 1.4em;
-	float: right;
 	line-height: 1.35;
 	margin: auto;
-	right: 0;
+	right: 3.5vw;
 	width: 80%;
 	position: absolute;
 	top: 50%;
@@ -531,8 +529,34 @@ a.bylaws:hover {
 .member-bio .bio-content {
 	font-weight: 300;
 }
-
-
+/*For tiny screens*/
+.responsive-image-wrap {
+	display: none;
+}
+.images-container {
+	margin: 0 auto;
+	width: fit-content;
+}
+.responsive-image-container {
+	display: inline-block;
+}
+.responsive-adrian, .responsive-hannah, .responsive-jeff {
+	background-size: cover;
+}
+.responsive-adrian {
+	background-image: url("../assets/images/adrian.jpg");
+}
+.responsive-hannah {
+	background-image: url("../assets/images/hannah.jpg");
+}
+.responsive-jeff {
+	background-image: url("../assets/images/jeff.jpg");
+}
+.responsive-image {
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+}
 /*--------------------------------------------------------------------------------------------
 Services Page
 ---------------------------------------------------------------------------------------------*/
@@ -551,7 +575,7 @@ Services Page
 }
 
 .services-header.focused .header-content, .join-header.focused .header-content {
-	font-size: 2em;
+	font-size: 1.88em;
 	padding: 0 2em;
 }
 
@@ -715,36 +739,39 @@ Media Queries
 		height: 39vh;
 	}
 	/*------------- About Page --------------------*/
-	.content-container {
-		padding-top: 3em;
+	.page-header.about-header {
+		height: 28vh;
 	}
 	.page-header .header-content {
 		font-size: 2.25em;
 		max-width: 65vw;
 	}
+	.values-legal-section.left-side, .members-section.right-side {
+		height: 56vh;
+	}
 	.list-header, .list-content {
 		font-size: 1.625em;
 	}
 	.services-list {
-		margin-top: 2em;
+		margin-top: 1em;
 	}
 	.values-header.header {
 		padding-bottom: 10px;
 	}
 	.legal-stuff.values-legal {
-		height: 11vh;
+		height: 14vh;
 	}
 	.members-section .right-side {
 		padding: 1.5em 0 0 0;
 	}
 	.members-list {
-		margin-top: 4.25em;
+		margin-top: -0.75em;
 	}
 	.member .image-container {
 		margin-left: 0;
 	}
-	.member {
-		width: 90%;
+	.member-bio {
+		right: 1em;
 	}
 	.hannah {
 		margin: 3.5em auto;
@@ -757,7 +784,7 @@ Media Queries
 	}
 /*------------- Join Page --------------------*/
 	.join-section-header {
-		margin-bottom: 10px;
+		margin-bottom: 0.75em;
 	}
 	.join-section .list-content {
 		font-size: 1.55em;
@@ -766,47 +793,124 @@ Media Queries
 
 /* iPad Pro Portrait */
 @media screen and (max-width: 1024px) and (max-height: 1366px) {
-/*-------------  Nav --------------------*/
+/*-------------  Nav/Global --------------------*/
 	.global-navbar nav {
 		width: auto;
 	}
 	.logo-container-global {
 		width: 16.75em;
 	}
+	.page-header {
+		padding-top: 5em;
+	}
+
+
+/*------------- Home Page --------------------*/
+	.page-header.home-header {
+		padding-top: 8em;
+	}
 /*------------- About Page --------------------*/
+	.legal-stuff.values-legal {
+		height: 11vh;
+	}
 	.page-header .header-content {
 		max-width: 80vw;
 	}
+	.service-item .list-content, .service-item .list-header {
+		font-size: 1.75em;
+	}
+	.list-content, .list-header,
+	.join-section .list-content, .join-section .list-header {
+		font-size: 1.7em;
+	}
 	.member {
-		margin: 8em auto;
+		margin: 4.5em auto;
 		width: auto;
 	}
-	.member-bio {
-		width: 75%;
+	.member.jeff {
+		margin: 2.75em auto;
 	}
+	.image-container {
+		display: none;
+	}
+	.member-bio {
+		right: unset;
+		width: 100%;
+	}
+	.responsive-image-wrap {
+		display: block;
+		height: 14em;
+		width: 100%;
+	}
+	.responsive-image-container {
+		height: 14em;
+		margin: 0 2em;
+		width: 14em;
+	}
+
 /*------------- Services Page --------------------*/
+	.services-header, .join-header {
+		height: 28vh;
+	}
+	.services-header .header-title {
+		font-size: 7.24em;
+	}
 	.input-container.description-container {
 		margin-bottom: 0;
 	}
 	.description-input {
 		height: 21.5vh;
 	}
+	.services-section.left-side, .quote-section.right-side,
+	.join-section.left-side, .join-us-section.right-side {
+		height: 56vh;
+	}
+	.request-form textarea {
+		height: 27vh;
+	}
+	.quote-section.focused, .join-us-section.focused {
+		transform: translateY(-28vh);
+	}
+	.quote-section.focused textarea {
+		height: 50vh;
+	}
 /*------------- Join Page --------------------*/
 	.info-input {
 		height: 11em;
+	}
+	.join-us-section textarea {
+		height: 22vh;
+	}
+	.join-us-section.focused textarea {
+		height: 45vh;
 	}
 }
 
 /* iPad landscape */
 @media screen and (max-width: 1024px) and (max-height: 768px){
-	/*------------- Nav Bar --------------------*/
+	/*------------- Nav Bar/Global --------------------*/
 	.logo-container-global {
 		width: 8.5em;
 	}
 	.nav-link {
 		font-size: 1.75em;
 	}
+	.page-header {
+		padding-top: 0;
+	}
+	.request-form .input-container input {
+		margin-top: 0;
+	}
+	.request-form input, .request-form textarea {
+		font-size: 1.5em;
+	}
+	.organization, .address {
+		margin-bottom: 0;
+	}
 	/*------------- Home Page --------------------*/
+	.page-header.home-header {
+		padding-top: 2em;
+	}
 	.page-header.home-header .header-title {
 		font-size: 8em;
 	}
@@ -815,6 +919,9 @@ Media Queries
 	}
 	.service-header {
 		top: 20%;
+	}
+	svg {
+		height: 10em;
 	}
 	/*------------- About Page --------------------*/
 	.content-container {
@@ -835,30 +942,43 @@ Media Queries
 	.left-side .list-item {
 		padding: 1em 0 0 0;
 	}
+	.legal-stuff.values-legal {
+		height: 12.75vh;
+	}
 	.members-list {
 		margin: 0;
 	}
 	.members-header.header {
-		font-size: 3.5em;
+		font-size: 2.75em;
 	}
 	.member .image-container {
+		display: block;
 		height: 10em;
 		margin-top: 1em;
+		right: 0;
 		width: 10em;
 	}
-	.member {
+	.member, .member.jeff {
 		margin: 0 auto;
 	}
 	.member-bio {
-		font-size: 1.25em;
+		font-size: 1.1em;
+		right: 0;
+		width: 80%;
+	}
+	.responsive-image-wrap {
+		display: none;
 	}
 	/*------------- Services Page --------------------*/
 	.services-content .page-header .header-title {
 		font-size: 6.6em;
 		padding: 0.33em 1em;
 	}
+	.service-item .list-content, .service-item .list-header {
+		font-size: 1.275em;
+	}
 	.services-list {
-		margin-top: 1em;
+		margin-top: 0;
 	}
 	.services-list .list-headern .list-content {
 		font-size: 1.25em;
@@ -867,5 +987,27 @@ Media Queries
 	.request-form label {
 		font-size: 1.66em;
 	}
-
+	.request-form textarea {
+		height: 18vh;
+	}
+	.quote-section.focused textarea {
+		height: 37vh;
+	}
+	.services-header.focused .header-title, .join-header.focused .header-title {
+		font-size: 3.6em;
+	}
+	.services-header.focused .header-content, .join-header.focused .header-content {
+		font-size: 1.39em;
+	}
+	/*----------------Join Page----------------------*/
+	.list-content, .list-header,
+	.join-section .list-content, .join-section .list-header {
+		font-size: 1.175em;
+	}
+	.join-us-section textarea {
+		height: 9vh;
+	}
+	.join-us-section.focused textarea {
+		height: 28vh;
+	}
 }
