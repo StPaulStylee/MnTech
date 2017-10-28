@@ -20,10 +20,11 @@ const server = app.listen(port, function () {
 });
 
 let transporter = nodemailer.createTransport({
+  // host: 'smtp.example.com',
   service: 'gmail',
   auth: {
-      user: ,
-      pass:
+      user: 'mntechcoop@gmail.com',
+      pass: 'MinnesotaTech*2017!'
   },
 });
 
