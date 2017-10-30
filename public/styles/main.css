@@ -1169,3 +1169,22 @@ Media Queries
 		font-size: 2em;
 	}
 }
+/* Smaller than tablet */
+@media screen and (max-width: 767px) {
+	/* ---------- Global -----------*/
+	body {
+		overflow: scroll;
+	}
+	#general-page {
+		position: relative;
+	}
+	.left-side, .right-side {
+		float: none;
+		width: 100%;
+	}
+	/*---------- Home ----------*/
+	li.service {
+		display: list-item;
+		width: 100%;
+	}
+}
