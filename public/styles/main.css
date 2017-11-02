@@ -88,6 +88,11 @@ button:focus {
     outline: var(--vibrant-green) auto 5px;
 }
 
+textarea {
+	border-color: rgb(212, 212, 212);
+
+}
+
 label {
 	display: inline-block;
 }
@@ -711,7 +716,43 @@ Footer
 
 /*--------------------------------------------------------------------------------------------
 Media Queries
----------------------------------------------------------------------------------------------*/
+/* 4K */
+@media screen and (max-width: 2560px) and (max-height: 1458px) {
+	/* -------Nav/Global ------- */
+	.nav-link {
+		font-size: 3.25em;
+	}
+	.logo-container-global {
+		width: 19em;
+	}
+	.page-header .header-title {
+		font-size: 12em;
+	}
+	.page-header .header-content {
+		font-size: 3.25em;
+	}
+	/* ----- Landing ------ */
+	.navigate-text {
+		font-size: 11em;
+	}
+	.navigate-text.large {
+		font-size: 18em;
+	}
+	/* ------- Home Page ------- */
+	.page-header.home-header .header-title {
+		font-size: 12em;
+	}
+	.page-header.home-header .header-content {
+		font-size: 5em;
+	}
+	.service-header {
+		font-size: 6.5em;
+	}
+	.svg-container {
+		width: 100%;
+	}
+}
+
 /* iPad Pro Landscape */
 @media screen and (max-width: 1366px) {
 	/*------------- Globals --------------------*/
@@ -928,6 +969,121 @@ Media Queries
 	}
 	.right-side, .left-side {
 		padding: 5px 3em;
+	}
+}
+
+/* Standard Ass Laptop */
+@media screen and (max-width: 1280px) and (max-height: 726px) {
+	/*------- Global/Nav ------------ */
+	.logo-container-global {
+		width: 8em;
+	}
+	.nav-link {
+		font-size: 1.75em;
+	}
+	.page-header .header-title {
+		font-size: 6em;
+	}
+	.page-header .header-content {
+		font-size: 1.75em;
+	}
+	.page-header.focused .header-content {
+		font-size: 1.38em;
+	}
+	/* ------ Landing ---------------*/
+	.logo-container-landing {
+		width: 13%;
+	}
+	.navigate-text {
+		font-size: 6em;
+	}
+	.navigate-text.large {
+		font-size: 10em;
+	}
+	/*------------ Home Page ------------*/
+	.page-header.home-header .header-title {
+		font-size: 6em;
+	}
+	.page-header.home-header .header-content {
+		font-size: 2.5em
+	}
+	.service-header {
+		top: 15%;
+	}
+	svg {
+		height: 12em;
+		top: 30%;
+	}
+	/*----------- About Page ---------------*/
+	.left-side {
+		padding: 1em 3em;
+	}
+	.header {
+		font-size: 2em;
+	}
+	.list-header, .list-content {
+		font-size: 1.25em;
+	}
+	.left-side .list-item {
+		padding: 0.75em 0;
+	}
+	.legal-stuff.values-legal {
+		padding: 1em 3em;
+	}
+	.right-side {
+		padding: 1em 3em;
+	}
+	.members-header.header {
+		font-size: 3em;
+	}
+	.members-list {
+		margin-top: 1.1em;
+	}
+	.member {
+		height: 10em;
+		margin: unset;
+	}
+	.hannah {
+		margin: 1em 0;
+	}
+	.member-bio {
+		font-size: 1.1em;
+	}
+	.member .image-container {
+		height: 10em;
+		width: 10em;
+	}
+	/* --------- Services Page --------- */
+	.services-list .list-header, .services-list .list-content {
+		font-size: 1.35em;
+	}
+	.input-container.organization {
+		margin: 1.5em 0 0 0;
+	}
+	textarea.description-input {
+		height: 10vh;
+	}
+	.right-side.focused textarea.description-input {
+		height: 28vh;
+	}
+	/* -------- Join Page ----------- */
+	.join-section .list-content {
+		font-size: 1.25em;
+	}
+	.input-container.address {
+		margin: 1.5em 0 0 0;
+	}
+	textarea.info-input {
+		height: 1.5em;
+	}
+	.join-us-section input {
+		font-size: 1.5em;
+	}
+	.right-side.focused textarea.info-input {
+		height: 23vh;
+	}
+	.page-header.focused.services-header .header-title {
+		font-size: 3em;
 	}
 }
 
