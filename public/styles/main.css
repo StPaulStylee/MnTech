@@ -731,6 +731,25 @@ Media Queries
 	.page-header .header-content {
 		font-size: 3.25em;
 	}
+	.header {
+		font-size: 4.6em;
+	}
+	.list-header, .list-content {
+		font-size: 2.5em;
+	}
+	.request-form label, .request-form input, .request-form textarea {
+		font-size: 3em;
+	}
+	.page-header.focused .header-title {
+		font-size: 7em;
+	}
+	.page-header.focused .header-content {
+		font-size: 2.88em;
+	}
+	.global-footer {
+		font-size: 2.3em;
+	}
+
 	/* ----- Landing ------ */
 	.navigate-text {
 		font-size: 11em;
@@ -750,6 +769,31 @@ Media Queries
 	}
 	.svg-container {
 		width: 100%;
+	}
+	/* ------ About Page ------*/
+	.member {
+		height: 19em;
+	}
+	.member-bio {
+		font-size: 2em;
+		width: 78%;
+	}
+	.member .image-container {
+		height: 19em;
+		width: 19em;
+	}
+	/* ------ Services Page -------*/
+	.services-list .list-header, .services-list .list-content {
+		font-size: 2.75em;
+	}
+	.right-side.focused textarea.description-input {
+		height: 43vh;
+	}
+	.right-side.focused textarea.info-input {
+		height: 37vh;
+	}
+	.page-header.focused.services-header .header-title {
+		font-size: 6em;
 	}
 }
 
@@ -990,6 +1034,15 @@ Media Queries
 	.page-header.focused .header-content {
 		font-size: 1.38em;
 	}
+	.request-form label {
+		font-size: 1.25em;
+	}
+	.global-footer {
+		font-size: 1.3em;
+	}
+	.request-form input, .request-form textarea {
+		font-size: 2em;
+	}
 	/* ------ Landing ---------------*/
 	.logo-container-landing {
 		width: 13%;
@@ -1000,6 +1053,7 @@ Media Queries
 	.navigate-text.large {
 		font-size: 10em;
 	}
+
 	/*------------ Home Page ------------*/
 	.page-header.home-header .header-title {
 		font-size: 6em;
@@ -1008,8 +1062,10 @@ Media Queries
 		font-size: 2.5em
 	}
 	.service-header {
+		font-size: 3.5em;
 		top: 15%;
 	}
+
 	svg {
 		height: 12em;
 		top: 30%;
@@ -1323,5 +1379,41 @@ Media Queries
 	}
 	.page-header.focused.services-header .header-title {
 		font-size: 2em;
+	}
+}
+
+/* Cellular Phone Machines */
+@media screen and (max-width: 425px) {
+	/* -----------Global/Nav ------------ */
+	.global-navbar {
+		height: 100vh;
+		padding: 8em 4em 4em 4em;
+		z-index: 1;
+	}
+	.logo-container-global {
+		margin: 0 auto;
+		position: relative;
+		top: unset;
+		transform: unset;
+	}
+	.global-navbar nav {
+		float: none;
+		position: unset;
+	}
+	.global-navbar nav a {
+		border-bottom: solid 2px transparent;
+		display: block;
+	}
+	.global-navbar nav a:first-child,
+	.global-navbar nav a,
+	.global-navbar nav a:last-child {
+		margin-bottom: 4em;
+		padding: 0;
+		text-align: center;
+	}
+	.nav-link {
+		display: inline-block;
+		font-size: 2.5em;
+		padding: 10px;
 	}
 }
