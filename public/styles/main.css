@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	overflow: hidden;
+	overflow: scroll;
 }
 ol, ul {
 	list-style: none;
@@ -445,7 +445,7 @@ li.service.web-design, li.service.apps, li.service.branding {
 
 /* SVGs*/
 .svg-container {
-	height: 43vh;
+	height: 40vh;
 	margin: 0 auto;
 	position: relative;
 	width: 12em;
@@ -1385,7 +1385,11 @@ Media Queries
 /* Cellular Phone Machines */
 @media screen and (max-width: 425px) {
 	/* -----------Global/Nav ------------ */
+	#general-page {
+		position: relative;
+	}
 	.global-navbar {
+		display: none;
 		height: 100vh;
 		padding: 8em 4em 4em 4em;
 		z-index: 1;
@@ -1415,5 +1419,95 @@ Media Queries
 		display: inline-block;
 		font-size: 2.5em;
 		padding: 10px;
+	}
+	.global-footer {
+		font-size: 1em;
+		position: fixed;
+	}
+	.left-side {
+		float: none;
+		width: 100%;
+	}
+	.right-side {
+		float: none;
+		position: relative;
+		right: unset;
+		width: 100%;
+	}
+	.list {
+		left: unset;
+		padding: 0;
+		position: static;
+		right: unset;
+		transform: unset;
+	}
+	.left-side .header {
+		padding: 0;
+	}
+	.request-form label, .request-form input, .request-form textarea {
+		font-size: 1.25em;
+	}
+	.page-header.focused {
+		transform: none;
+		width: 100%;
+	}
+	.page-header.focused.services-header .header-title {
+		font-size: 2.5em
+	}
+	.request-form input[type="submit"] {
+		display: block !important;
+	}
+	.right-side.focused {
+		transform: none;
+		transition: unset;
+	}
+
+	/*------- Landing Page --------*/
+	.navigate-text {
+		font-size: 3em;
+	}
+	.navigate-text.large {
+		font-size: 5em;
+	}
+	.navigate-container-left {
+		padding-right: 4em;
+	}
+	.navigate-container-right {
+		padding-left: 4em;
+	}
+	.logo-container-landing {
+		width: 25%;
+	}
+	.page-header .header-title,
+	.page-header.focused .header-title {
+		font-size: 3em;
+	}
+	/* ------- Home Page -------- */
+	.page-header.home-header .header-content {
+		font-size: 2em;
+	}
+	li.service {
+		display: block;
+		width: 100%;
+	}
+	/*------- Services Page --------*/
+	.services-content .page-header .header-title {
+		font-size: 2.5em;
+	}
+	.page-header .header-content {
+		font-size: 1.25em;
+	}
+	.request-form textarea.description-input,
+	.right-side.focused textarea.description-input {
+		height: 34vh;
+	}
+	.services-section.left-side, .quote-section.right-side,
+	.join-section.left-side, .join-us-section.right-side {
+		height: unset;
+		margin-bottom: 2em;
+	}
+	/* ----- Join Page ------*/
+	.request-form textarea.info-input {
+		height: 34vh;
 	}
 }
