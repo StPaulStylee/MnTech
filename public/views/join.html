@@ -51,11 +51,11 @@
       <h2 class="join-us-header header">Become A Member</h2>
     </div>
     <form class="request-form" ng-submit="join.sendFormData(join)" ng-model="join">
-      <div class="input-container">
+      <div class="input-container name-container">
         <label class="name-label" for="name">Name</label>
         <input class="name-input" type="text" name="name" ng-model="join.name" ng-focus="join.setFocus(true)" required/>
       </div>
-      <div class="input-container address">
+      <div class="input-container address-container">
         <label class="address-label" for="address">Address</label>
         <input class="address-input" type="text" name="address" ng-model="join.address" ng-focus="join.setFocus(true)" />
       </div>
