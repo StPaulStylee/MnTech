@@ -246,6 +246,7 @@ h1.header-title {
 }
 
 .list-item {
+	display: inline-block;
 	padding-bottom: 10px;
 }
 
@@ -373,6 +374,9 @@ Landing Page
 
 .navigate-text.large {
 	font-size: 12em;
+}
+.nav-hamburger {
+	display: none;
 }
 
 
@@ -544,6 +548,7 @@ a.bylaws:hover {
 }
 
 .member {
+	display: inline-block;
 	height: 9em;
 	margin: 2em auto;
 	position: relative;
@@ -670,11 +675,11 @@ Join Us Page
 }
 
 textarea.info-input {
-	height: 5vh;
+	height: 13vh;
 }
 
 .right-side.focused textarea.info-input {
-	height: 23vh;
+	height: 32vh;
 }
 
 .name-container {
@@ -769,7 +774,7 @@ Media Queries
 		width: 7em;
 	}
 	.member-bio {
-		font-size: 0.9em;
+		font-size: 1.2em;
 	}
 	textarea.description-input {
 		height: 8vh;
@@ -788,6 +793,75 @@ Media Queries
 	}
 }
 
+@media screen and (max-width: 768px) {
+	.navigate-text {
+		font-size: 6em;
+	}
+	.navigate-text.large {
+		font-size: 10em;
+	}
+	.page-header .header-title {
+		font-size: 4em;
+	}
+	.page-header.home-header .header-content {
+		font-size: 2.25em;
+	}
+	.service-header {
+		font-size: 2.75em;
+	}
+	svg {
+		height: 10em;
+		top: 40%;
+	}
+	.page-header .header-content {
+		font-size: 1.25em;
+		width: 65%;
+	}
+	.left-side {
+		padding: 1.5em;
+	}
+	.list {
+		padding: 0 1.5em;
+	}
+	.list-header, .list-content {
+		font-size: 1.1em;
+	}
+	.member .image-container {
+		display: none;
+	}
+	.responsive-image-wrap {
+		display: inline-block;
+		width: 100%;
+	}
+	.responsive-image-container {
+		height: 10em;
+		width: 10em;
+	}
+	.responsive-image-container.center-image {
+		margin: 0 2em;
+	}
+	.member-bio {
+		font-size: 1.25em;
+		width: unset;
+	}
+	.members-section.right-side {
+		overflow: scroll;
+	}
+	.request-form .email-container, .request-form .phone-container,
+	.name-container, .address-container {
+		width: 47%;
+	}
+	.page-header.focused .header-title {
+		font-size: 2em;
+	}
+	.page-header.focused .header-content {
+		font-size: 1.15em;
+	}
+	.join-item .list-header, .join-item .list-content {
+		font-size: 1.09em;
+	}
+}
+
 
 /* Cellular Phone Machines */
 @media screen and (max-width: 425px) {
@@ -803,6 +877,12 @@ Media Queries
 		height: 100vh;
 		padding: 8em 4em 4em 4em;
 		z-index: 1;
+		transition: 0.5s ease-in-out;
+	}
+	.global-navbar.open {
+		display: block;
+		position: fixed;
+		transition: 0.5s ease-in-out;
 	}
 	.logo-container-global {
 		margin: 0 auto;
@@ -830,12 +910,95 @@ Media Queries
 		font-size: 2.5em;
 		padding: 10px;
 	}
+	.hamburger-container {
+		margin: 1em 1em 0 0;
+		position: fixed;
+		right: 0;
+		z-index: 1
+	}
+	.nav-hamburger {
+		display: block;
+		width: 3em;
+		height: 2.25em;
+		position: relative;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: .5s ease-in-out;
+		-moz-transition: .5s ease-in-out;
+		-o-transition: .5s ease-in-out;
+		transition: .5s ease-in-out;
+		cursor: pointer;
+		z-index: 1;
+	}
+	.nav-hamburger span {
+		display: block;
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		background: var(--white);
+		border-radius: 9px;
+		opacity: 1;
+		left: 0;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: .25s ease-in-out;
+		-moz-transition: .25s ease-in-out;
+		-o-transition: .25s ease-in-out;
+		transition: .25s ease-in-out;
+	}
+	.nav-hamburger span:nth-child(1) {
+  	top: 0px;
+	}
+
+	.nav-hamburger span:nth-child(2),.nav-hamburger span:nth-child(3) {
+	  top: 10px;
+	}
+
+	.nav-hamburger span:nth-child(4) {
+	  top: 20px;
+	}
+	.nav-hamburger.open {
+		z-index: 2;
+	}
+	.nav-hamburger.open span {
+		background: var(--navy);
+	}
+	.nav-hamburger.open span:nth-child(1) {
+	  top: 18px;
+	  width: 0%;
+	  left: 50%;
+	}
+
+	.nav-hamburger.open span:nth-child(2) {
+	  -webkit-transform: rotate(45deg);
+	  -moz-transform: rotate(45deg);
+	  -o-transform: rotate(45deg);
+	  transform: rotate(45deg);
+	}
+
+	.nav-hamburger.open span:nth-child(3) {
+	  -webkit-transform: rotate(-45deg);
+	  -moz-transform: rotate(-45deg);
+	  -o-transform: rotate(-45deg);
+	  transform: rotate(-45deg);
+	}
+
+	.nav-hamburger.open span:nth-child(4) {
+	  top: 18px;
+	  width: 0%;
+	  left: 50%;
+	}
 	.global-footer {
 		font-size: 1em;
 		position: fixed;
 	}
 	.left-side {
 		float: none;
+		height: unset;
 		width: 100%;
 	}
 	.right-side {
@@ -850,6 +1013,9 @@ Media Queries
 		position: static;
 		right: unset;
 		transform: unset;
+	}
+	.list-header, .list-content {
+		font-size: 1.25em;
 	}
 	.left-side .header {
 		padding: 0;
@@ -871,7 +1037,15 @@ Media Queries
 		transform: none;
 		transition: unset;
 	}
-
+	.request-form .email-container, .request-form .phone-container,
+	.name-container, .address-container {
+		float: none;
+		width: 100%;
+	}
+	.header, .right-side .header {
+		margin-bottom: 1em;
+		text-align: center;
+	}
 	/*------- Landing Page --------*/
 	.navigate-text {
 		font-size: 3em;
@@ -890,11 +1064,40 @@ Media Queries
 	}
 	.page-header .header-title,
 	.page-header.focused .header-title {
-		font-size: 3em;
+		font-size: 2.25em;
+	}
+	/* -------- About --------*/
+	.legal-stuff .list-item {
+		width: 100%;
+	}
+	.list-item .legal-header {
+		text-align: center;
+	}
+	.member {
+		height: 16em;
+	}
+	.member-bio {
+		position: static;
+		right: unset;
+		top: unset;
+		transform: translate(0);
+	}
+	.values-legal-section {
+		padding: 0;
+	}
+	.core-value {
+		padding: 10px;
+	}
+	.legal-stuff.values-legal {
+		margin-top: 1em;
+		position: static;
+	}
+	.values-header.header {
+		padding: 6px;
 	}
 	/* ------- Home Page -------- */
 	.page-header.home-header .header-content {
-		font-size: 2em;
+		font-size: 1.6em;
 	}
 	li.service {
 		display: block;
@@ -906,6 +1109,7 @@ Media Queries
 	}
 	.page-header .header-content {
 		font-size: 1.25em;
+		width: 65%;
 	}
 	.request-form textarea.description-input,
 	.right-side.focused textarea.description-input {
@@ -914,10 +1118,75 @@ Media Queries
 	.services-section.left-side, .quote-section.right-side,
 	.join-section.left-side, .join-us-section.right-side {
 		height: unset;
+	}
+	.right-side {
+		height: unset;
 		margin-bottom: 2em;
 	}
+	.page-header.focused .header-content {
+		font-size: 1.25em;
+	}
+
 	/* ----- Join Page ------*/
 	.request-form textarea.info-input {
 		height: 34vh;
+	}
+	.members-section.right-side {
+		overflow: auto;
+	}
+	.images-container {
+		margin: 0 auto;
+	}
+	.join-item .list-header, .join-item .list-content {
+		font-size: 1.25em;
+	}
+}
+@media screen and (max-width: 375px) {
+	.navigate-container-left {
+		padding-right: 3em;
+	}
+	.navigate-container-right {
+		padding-left: 3em;
+	}
+	.page-header .header-content {
+		width: 75%;
+	}
+	.responsive-image-container {
+		height: 9em;
+		width: 9em;
+	}
+	.legal-stuff.values-legal {
+		margin-top: 3em;
+	}
+}
+@media screen and (max-width: 320px) {
+	.navigate-text {
+		font-size: 2em;
+	}
+	.navigate-text.large {
+		font-size: 4em;
+	}
+	.global-footer {
+		font-size: 8px;
+	}
+	.page-header .header-title, .page-header.focused .header-title {
+		font-size: 1.8em;
+	}
+	.home-content .page-header .header-content {
+		width: 80%;
+	}
+	.services-content .page-header .header-title {
+		font-size: 2em;
+	}
+	.page-header .header-content {
+		font-size: 1.15em;
+		width: 80%;
+	}
+	.legal-stuff.values-legal {
+		margin-top: 8em;
+	}
+	.responsive-image-container {
+		height: 7em;
+		width: 7em;
 	}
 }

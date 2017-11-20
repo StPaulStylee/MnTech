@@ -35,21 +35,32 @@
 
     <base href="/" />
   </head>
-  <body ng-controller="BaseController as base">
-    <header class="global-navbar">
+  <body>
+    <div class="test" ng-controller="BaseController as base">
+
+    <header class="global-navbar" ng-class="{open: base.isOpen}">
       <div class="logo-container-global">
         <img src="/assets/images/mntc_logo_grey.png" alt="The logo for Minnesota Tech. It consists
                   of the geographical shape of minnesota, painted vibrant green, the the text MN Tech
                   coop inside of it" title="The MN Tech Logo" />
       </div>
       <nav>
-        <a ng-class="{home: base.isActive.home}" href="/home" ng-click="base.setActive('home')"><span class="nav-link">Home</span></a
-        ><a ng-class="{about: base.isActive.about}" href="/about" ng-click="base.setActive('about')"><span class="nav-link">About</span></a
-        ><a ng-class="{services: base.isActive.services}" href="/services" ng-click="base.setActive('services')"><span class="nav-link">Services</span></a
-        ><a ng-class="{join: base.isActive.join}" href="/join" ng-click="base.setActive('join')"><span class="nav-link">Join</span></a>
+        <a ng-class="{home: base.isActive.home}" class href="/home" ng-click="base.setActive('home')"><span class="nav-link">Home</span></a
+        ><a ng-class="{about: base.isActive.about}" class href="/about" ng-click="base.setActive('about')"><span class="nav-link">About</span></a
+        ><a ng-class="{services: base.isActive.services}" class href="/services" ng-click="base.setActive('services')"><span class="nav-link">Services</span></a
+        ><a ng-class="{join: base.isActive.join}" href="/join" class ng-click="base.setActive('join')"><span class="nav-link">Join</span></a>
         <!-- <a href="/blog"><span class="nav-link">Blog</span></a> -->
       </nav>
     </header>
+    <div class="hamburger-container">
+      <div class="nav-hamburger" ng-class="{open: base.isOpen}" ng-click="base.setOpen()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
     <ng-view>
 
     </ng-view>
