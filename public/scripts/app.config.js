@@ -21,6 +21,9 @@ angular.module('mnTechSite')
          }).when('/bylaws', {
            templateUrl: 'views/bylaws.html',
            controller: 'BylawsController as laws'
+         }).when('/survey', {
+           templateUrl: 'views/survey.html',
+           controller: 'SurveyController as survey'
          }).otherwise({
            redirectTo: '/landing'
          });

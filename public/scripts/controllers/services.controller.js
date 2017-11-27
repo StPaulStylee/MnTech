@@ -11,10 +11,10 @@ function ServicesController(EmailService, StyleService) {
  // }
  ctrl.isFocused;
 
-  ctrl.sendFormData = function(data) {
+  ctrl.sendQuoteData = function(data) {
     data.subject = "Requesting A Quote"
     console.log(ServicesController.name);
-    EmailService.sendFormData(data).then(function(response){
+    EmailService.sendQuoteData(data).then(function(response){
       console.log("Response from submit: ", repsonse);
     });
   }

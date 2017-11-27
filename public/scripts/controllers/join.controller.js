@@ -8,10 +8,10 @@ function JoinController(EmailService, StyleService) {
 
   ctrl.isFocused;
 
-  ctrl.sendFormData = function(data) {
+  ctrl.sendMemberData = function(data) {
     data.subject = "Membership Request"
     console.log(ServicesController.name);
-    EmailService.sendFormData(data).then(function(response){
+    EmailService.sendMemberData(data).then(function(response){
       console.log("Response from submit: ", repsonse);
     });
   }
