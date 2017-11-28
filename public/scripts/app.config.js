@@ -21,6 +21,9 @@ angular.module('mnTechSite')
          }).when('/bylaws', {
            templateUrl: 'views/bylaws.html',
            controller: 'BylawsController as laws'
+         }).when('/portfolio', {
+           templateUrl: 'views/portfolio.html',
+           controller: 'PortfolioController as portfolio'
          }).otherwise({
            redirectTo: '/landing'
          });
