@@ -22,6 +22,7 @@ function SurveyController(EmailService) {
   ctrl.sendSurveyData = function(data) {
     data.subject = "Client Survey"
     console.log(ServicesController.name);
+    console.log('Survey is:',data);
     EmailService.sendSurveyData(data).then(function(response){
       console.log("Response from submit: ", repsonse);
     });

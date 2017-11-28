@@ -19,7 +19,7 @@
         (*We’ll focus on all of these stakeholders,<br />
          but ranking them helps us develop the user <br />
          experience on the website!) </label>
-      <ul data-as-sortable ng-model="survey.visiterRank">
+      <ul data-as-sortable ng-model="survey.visiterList">
             <li ng-repeat="visiter in survey.visiterList" data-as-sortable-item>
                 <div data-as-sortable-item-handle>
                     {{visiter}}
@@ -37,12 +37,12 @@
       </textarea>
     </div>
     <div class="input-container webMove-container">
-      <label class="webMove-label" for="phone">
+      <label class="webMove-label" for="webMove">
         Check the boxes below of the current site pages you would like moved over to the new site. <br />
         (Could be all, could be none but this gets our content firmed up!)
       </label>
       <input class="webMove-input" type="checkbox" name="Home" value="Home" ng-model="survey.home" />Home<br />
-      <input class="webMove-input" type="checkbox" name="About BNA" value="About BNA" ng-model="survey.about BNA" />About BNA<br />
+      <input class="webMove-input" type="checkbox" name="About BNA" value="About BNA" ng-model="survey.aboutBNA" />About BNA<br />
       <input class="webMove-input" type="checkbox" name="Bancroft Neighborhood History" value="Bancroft Neighborhood History" ng-model="survey.history" />Bancroft Neighborhood History"<br />
       <input class="webMove-input" type="checkbox" name="Meet Our Board" value="Meet Our Board" ng-model="survey.meetOurBoard" />Meet Our Board<br />
       <input class="webMove-input" type="checkbox" name="Mission" value="Mission" ng-model="survey.mission" />Mission<br />
@@ -56,6 +56,29 @@
       <input class="webMove-input" type="checkbox" name="Commercial Improvement" value="Commercial Improvement" ng-model="survey.commercialImprovement" />Commercial Improvement<br />
     </div>
 
+    <div class="input-container webMove-container">
+      <label class="webMove-label" for="phone">
+        Check the boxes below of the new site pages/features you would like implemented on the new site.<br />
+         (This section helps develop new content for your website.)
+      </label>
+      <input class="newPages-input" type="checkbox" name="Surveys/Polling" value="Surveys/Polling" ng-model="survey.surveysPolling" />
+        Surveys/Polling (Ability to create, promote and report on surveys or polls from your site)<br />
+      <input class="newPages-input" type="checkbox" name="Event Management System" value="Event Management System" ng-model="survey.eventManagementSystem" />
+        Event Management System (Promote events on your site. Send invitations, collect RSVPS, contact guest lists and organize tasks)<br />
+      <input class="newPages-input" type="checkbox" name="Forms for programs" value="Forms for programs" ng-model="survey.formsForPrograms" />
+        Forms for programs (Stakeholders can complete program applications online)<br />
+      <input class="newPages-input" type="checkbox" name="Appointment Booking" value="Appointment Booking" ng-model="survey.appointmentBooking" />
+        Appointment Booking (Users can schedule an appointment on your website)<br />
+      <input class="newPages-input" type="checkbox" name="Store" value="Store" ng-model="survey.store" />
+        Store (Selling BNA merchandise / Offering online payments for BNA registrations etc when applicable)<br />
+      <input class="newPages-input" type="checkbox" name="Expanded Business Directory" value="Expanded Business Directory" ng-model="survey.expandedBusinessDirectory" />
+        Expanded Business Directory (Interactive and searchable Business Directory)<br />
+      <input class="newPages-input" type="checkbox" name="Live Chat" value="Live Chat" ng-model="survey.LiveChat" />
+        Live Chat (Users can chat with a BNA representative on your website)<br />
+
+      <label class="other-label" for="other">
+        Other (We want to make your wildest dreams come true!  Put them here.)</label>
+      <textarea class="other-input" name="other" ng-model="survey.other"></textarea>
     <div class="input-container submit-button">
       <input type="submit" ng-click="survey.sendSurveyData(survey)"/>
     </div>

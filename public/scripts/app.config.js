@@ -24,6 +24,9 @@ angular.module('mnTechSite')
          }).when('/portfolio', {
            templateUrl: 'views/portfolio.html',
            controller: 'PortfolioController as portfolio'
+         }).when('/survey', {
+           templateUrl: 'views/survey.html',
+           controller: 'SurveyController as survey'
          }).otherwise({
            redirectTo: '/landing'
          });
