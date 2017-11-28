@@ -1,0 +1,62 @@
+<div class="section-header">
+    <h2 class="quote-header header">BNA Survey</h2>
+  </div>
+  <form class="survey-form" ng-model="survey">
+    <div class="input-container goals-container">
+      <label class="goals-label" for="goals">
+        What are the main goals the website should fulfill?<br />
+        (Ex. The website should elevate the mission by acting<br />
+        as a resource to learn more about the community and community issues,<br />
+        making it easy to get involved through an event or meeting<br />
+        and offering opportunities for stakeholders to weigh in.)</label>
+      <textarea class="goals-input" name="goals" ng-model="survey.goals" >
+      </textarea>
+    </div>
+    <div class="input-container visiterRank-container">
+      <label class="visiter-label" for="visiterRank">
+        Rank the following options top to bottom (drag them drop them) <br />
+        in order of who you think will visit the site the most and why.<br />
+        (*We’ll focus on all of these stakeholders,<br />
+         but ranking them helps us develop the user <br />
+         experience on the website!) </label>
+      <ul data-as-sortable ng-model="survey.visiterRank">
+            <li ng-repeat="visiter in survey.visiterList" data-as-sortable-item>
+                <div data-as-sortable-item-handle>
+                    {{visiter}}
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="input-container email-container">
+      <label class="email-label" for="email">
+        Name three websites you love to use and why. <br />
+        (*Ex. website.com - I get the information I need fast,<br />
+         they offer fun interactive elements and  the design is beautiful)
+      </label>
+      <textarea class="website-input" name="website" ng-model="survey.website" >
+      </textarea>
+    </div>
+    <div class="input-container webMove-container">
+      <label class="webMove-label" for="phone">
+        Check the boxes below of the current site pages you would like moved over to the new site. <br />
+        (Could be all, could be none but this gets our content firmed up!)
+      </label>
+      <input class="webMove-input" type="checkbox" name="Home" value="Home" ng-model="survey.home" />Home<br />
+      <input class="webMove-input" type="checkbox" name="About BNA" value="About BNA" ng-model="survey.about BNA" />About BNA<br />
+      <input class="webMove-input" type="checkbox" name="Bancroft Neighborhood History" value="Bancroft Neighborhood History" ng-model="survey.history" />Bancroft Neighborhood History"<br />
+      <input class="webMove-input" type="checkbox" name="Meet Our Board" value="Meet Our Board" ng-model="survey.meetOurBoard" />Meet Our Board<br />
+      <input class="webMove-input" type="checkbox" name="Mission" value="Mission" ng-model="survey.mission" />Mission<br />
+      <input class="webMove-input" type="checkbox" name="Meeting Minutes" value="Meeting Minutes" ng-model="survey.meetingMinutes" />Meeting Minutes<br />
+      <input class="webMove-input" type="checkbox" name="Take A Tour" value="Take A Tour" ng-model="survey.takeATour" />Take A Tour<br />
+      <input class="webMove-input" type="checkbox" name="Volunteer" value="Volunteer" ng-model="survey.volunteer" />Volunteer<br />
+      <input class="webMove-input" type="checkbox" name="Block Clubs" value="Block Clubs" ng-model="survey.blockClubs" />Block Clubs<br />
+      <input class="webMove-input" type="checkbox" name="BNA Committees" value="BNA Committees" ng-model="survey.bnaCommittees" />BNA Committees<br />
+      <input class="webMove-input" type="checkbox" name="In The Neighborhood" value="In The Neighborhood" ng-model="survey.inTheNeighborhood" />In The Neighborhood<br />
+      <input class="webMove-input" type="checkbox" name="Resources and Forms" value="Resources and Forms" ng-model="survey.resourcesAndForms" />Resources and Forms<br />
+      <input class="webMove-input" type="checkbox" name="Commercial Improvement" value="Commercial Improvement" ng-model="survey.commercialImprovement" />Commercial Improvement<br />
+    </div>
+
+    <div class="input-container submit-button">
+      <input type="submit" ng-click="survey.sendSurveyData(survey)"/>
+    </div>
+  </form>
