@@ -3,17 +3,26 @@
   </div>
   <form class="request-form" ng-model="survey">
     <div class="input-container goals-container">
-      <label class="goals-label" for="goals">What are the main goals the website should fulfill?
-                                            (Ex. The website should elevate the mission by acting
-                                            as a resource to learn more about  the community and  community issues,
-                                            making it easy to get involved through an event or meeting
-                                            and offering opportunities for stakeholders to weigh in.)
-</label>
-      <textarea class="goals-input" name="goals" ng-model="survey.goals" ></textarea>
+      <label class="goals-label" for="goals">
+        What are the main goals the website should fulfill?<br />
+        (Ex. The website should elevate the mission by acting<br />
+        as a resource to learn more about the community and community issues,<br />
+        making it easy to get involved through an event or meeting<br />
+        and offering opportunities for stakeholders to weigh in.)</label>
+      <textarea class="goals-input" name="goals" ng-model="survey.goals" >
+      </textarea>
     </div>
     <div class="input-container">
-      <label class="organization-label" for="organization">Company/Organization</label>
-      <input class="organization-input" type="text" name="organization" ng-model="survey.organization" />
+      <label class="visiter-label" for="visiter">
+        Rank the following options top to bottom in order of who you think will visit the site the most and why.<br />
+        (*We’ll focus on all of these stakeholders, but ranking them helps us develop the user experience on the website!) </label>
+      <ul data-as-sortable data-ng-model="survey.visiterList">
+            <li ng-repeat="visiter in visiterList" data-as-sortable-item>
+                <div data-as-sortable-item-handle>
+                    {{$visiter}}
+                </div>
+            </li>
+        </ul>
     </div>
     <div class="input-container email-container">
       <label class="email-label" for="email">Email</label>
