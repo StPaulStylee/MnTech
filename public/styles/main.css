@@ -278,10 +278,11 @@ h1.header-title {
 	text-align: center;
 }
 
-.back {
+.back-container {
 	font-size: 1.4em;
 	padding: 1em;
 	text-align: center;
+	width: 100%;
 }
 
 
@@ -408,27 +409,32 @@ ul.services-section-list {
 
 li.service.web-design, li.service.apps {
 	background-color: var(--cloud-grey);
-	color: var(--navy);
 	position: relative;
 	text-shadow:
 		-1px -1px 0 var(--white),
     1px -1px 0 var(--white),
     -1px 1px 0 var(--white),
     1px 1px 0 var(--white);
+}
 
+.web-design .portfolio-link, .apps .portfolio-link {
+	color: var(--navy);
 }
 
 li.service.branding {
 	background-color: var(--storm-grey);
 	border-left: 2px solid var(--slate-grey);
 	border-right: 2px solid var(--slate-grey);
-	color: var(--white);
 	position: relative;
 	text-shadow:
 		-1px -1px 0 var(--slate-grey),
 		1px -1px 0 var(--slate-grey),
 		-1px 1px 0 var(--slate-grey),
 		1px 1px 0 var(--slate-grey);
+}
+
+.branding .portfolio-link {
+	color: var(--white);
 }
 
 li.service.web-design, li.service.apps, li.service.branding {
@@ -718,7 +724,7 @@ Footer
 }
 
 .footer-content-container {
-	margin: 1.25vh auto 0;
+	margin: 1vh auto 0;
 	width: fit-content;
 }
 
