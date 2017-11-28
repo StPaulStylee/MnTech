@@ -30,7 +30,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	overflow: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -310,7 +309,8 @@ Buttons
 	color: #a0a8b6;
 }
 
-.request-form.ng-valid-required input[type="submit"] {
+.request-form.ng-valid-required input[type="submit"],
+.survey-form input[type="submit"] {
 	background: var(--slate-grey);
 	color: var(--vibrant-green);
 	cursor: pointer;
@@ -735,6 +735,47 @@ Footer
 .footer-content-container a {
 	color: var(--white);
 }
+/*----------------------------------------------------------------------------
+Survey
+-----------------------------------------------------------------------------*/
+.survey-container {
+	overflow: scroll;
+}
+.survey-form {
+	padding: 1em;
+}
+.survey-form input[type="submit"] {
+	width: 100%;
+	margin: 1em 0;
+	padding: 1em;
+	font-size: 2em;
+	text-transform: uppercase;
+}
+.survey-form input, .survey-form textarea {
+	display: block;
+	width: 100%;
+}
+.survey-form input[type="checkbox"] {
+	display: inline-block;
+	width: unset;
+}
+.survey-form .checkbox-label {
+	font-size: 1.4em;
+}
+.survey-form label {
+	font-size: 2em;
+}
+body .survey-form {
+	overflow: auto;
+}
+.as-sortable-item {
+	border: solid 1px var(--storm-grey);
+	border-radius: 5px;
+	font-size: 1.4em;
+	margin: 5px;
+	padding: 1.2em;
+}
+
 /*----------------------------------------------------------------------------
 Media Queries
 -----------------------------------------------------------------------------*/
