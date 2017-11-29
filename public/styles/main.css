@@ -33,6 +33,16 @@ body {
 }
 ol, ul {
 	list-style: none;
+	cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+/* Apply a "closed-hand" cursor during drag operation. */
+ol:active,ul:active {
+	 cursor: grabbing;
+	 cursor: -moz-grabbing;
+	 cursor: -webkit-grabbing;
 }
 blockquote, q {
 	quotes: none;
@@ -53,6 +63,9 @@ html {
 
 *, *::before, *::after {
 	box-sizing: inherit;
+}
+input[type="checkbox"] {
+  transform:scale(1.5, 1.5);
 }
 
 
