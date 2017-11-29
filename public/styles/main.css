@@ -37,6 +37,13 @@ ol, ul {
   cursor: grab;
   cursor: -moz-grab;
   cursor: -webkit-grab;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+												supported by Chrome and Opera */
 }
 /* Apply a "closed-hand" cursor during drag operation. */
 ol:active,ul:active {
